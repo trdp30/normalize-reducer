@@ -41,8 +41,6 @@ const actionInitiated = (type) => {
 const normalizedData = ({data, modelName, type, schema, relationShips}) => {
   return function(dispatch) {
     if(data && data.data) {
-      console.log(this)
-      debugger
       let payload = normalize(data.data, schema)
       if(relationShips && relationShips.length) {
         relationShips.forEach((relationShip) => {
