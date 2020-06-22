@@ -2,7 +2,7 @@ import catchError from './error';
 
 export default function(type, payload) {
   if(!type || !payload) {
-    return catchError(type, 'Either "type" or "payload" is undefined')
+    throw new Error('Either "type" or "payload" is undefined')
   }
   if(payload && payload.data) {
     return {

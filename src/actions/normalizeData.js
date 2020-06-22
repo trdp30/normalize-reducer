@@ -1,21 +1,20 @@
-const normalizer = require('normalizr');
-const { normalize } = normalizer;
-import catchError from './error';
+const normalizr = require('normalizr');
+const { normalize } = normalizr;
 import success from './success';
 
 export default function({ response, type, schemaType, relationShips, modelName }) {
   if(!type) {
-    return catchError()
+    throw new Error('"type" value is required')
   }
   if(!response) {
-    catchError(type, '"response" value is required')
+    throw new Error('"response" value is required')
   }
   if(!schemaType) {
-    catchError(type, '"schemaType" value is required')
+    throw new Error('"schemaType" value is required')
   }
   return function(dispatch) {
     if(!dispatch) {
-      return catchError(type, '"normalizeData" should dispatch from a redux action')
+      throw new Error('"normalizeData" should dispatch from a redux action')
     }
     if(response && response.data) {
       let payload = normalize(response.data, schemaType)

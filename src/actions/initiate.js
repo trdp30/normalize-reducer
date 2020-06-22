@@ -1,8 +1,6 @@
-import catchError from './error';
-
 export default function(type) {
   if(!type) {
-    return catchError()
+    throw new Error('"type" is required')
   }
   return { type: type }
 }

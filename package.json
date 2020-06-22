@@ -1,6 +1,6 @@
 {
   "name": "normalize-reducer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package is for normalize the redux store data. It will prevent to have duplicate data in the store.",
   "main": "index.js",
   "scripts": {

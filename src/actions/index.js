@@ -1,4 +1,11 @@
-export const catchError = require('./error');
-export const success = require('./success');
-export const initiate = require('./initiate');
-export const normalizedData = require('./nomalize');
+import catchError from './error';
+import success from './success';
+import initiate from './initiate';
+import normalizeData from './normalizeData';
+const normalizr = require('normalizr');
+
+const normalize = {
+  catchError, success, initiate, normalizeData, normalizr
+}
+
+export default normalize;

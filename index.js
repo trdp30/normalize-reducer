@@ -1,4 +1,3 @@
-import * as normalizeReducer from './src/actions';
-const normalizr = require('normalizr');
+const { default: normalize } = require("./src/actions");
 
-module.exports = { ...normalizeReducer, normalizr }
+module.exports = normalize;
