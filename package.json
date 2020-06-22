@@ -1,6 +1,6 @@
 {
   "name": "normalize-reducer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This package is for normalize the redux store data. It will prevent to have duplicate data in the store.",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,13 @@
   "dependencies": {
     "normalizr": "^3.6.0"
   },
+  "keywords": [
+    "reducer",
+    "redux",
+    "normalizr",
+    "normalize",
+    "duplicacy",
+    "duplication"
+  ],
   "repository": "git@github.com:trdp30/normalize-reducer.git"
 }
